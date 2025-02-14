@@ -16,12 +16,51 @@
 <body>
 
     <div id="container">
+
         <header>
-            <h1>Saul Enriquez</h1>
-            <h2>Spring 2025</h2>
-            <nav>
+
+            
+            <div id="header-left">
+                <h1>Saul Enriquez</h1>
+                <h2>Spring 2025</h2>
+            </div>
+                
+
+            <nav class="header-right">
+                <div class="navigation-option">
+                    <a href="index.html">Home</a>
+                    <a href="bio.html">Biography</a>
+                </div>
+
+                <div class="navigation-option">
+                    <button class="drop-down__button">Assignments</button>
+                    <div class="drop-down__options">
+                        <a href="assignment/assignement1/index.html">assign 1</a>
+                        <a href="#">assign 2</a>
+                        <a href="#">assign 3</a>
+                        <a href="#">assign 4</a>
+                        <a href="#">assign 5</a>
+                        <a href="#">assign 5</a>
+                    </div>
+                </div>
+
+                <div class="navigation-option">
+                    <button class="drop-down__button">Final Project</button>
+                    <div class="drop-down__options">
+                        <a href="#">Proposal</a>
+                        <a href="#">Reasearch</a>
+                        <a href="#">Exploration</a>
+                        <a href="#">Wireframe</a>
+                        <a href="#">Style Guide</a>
+                        <a href="#">Prototype</a>
+                        <a href="#">Completion</a>
+                    </div>
+                </div>
+
+                <!--
+                <p><br><br><br><br><br><br></p>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="current">Home</a></li>
                     <li><a href="bio.html">Bio</a></li>
                 </ul>
                 <p>Assignments:</p>
@@ -42,15 +81,30 @@
                     <li><a href="">Hi-res Prototypes</a></li>
                     <li><a href="">Completion</a></li>
                 </ul>
+                -->
+
             </nav>
+
         </header>
 
         <main>
-
+            
+            <figure id="figureImages">
+                <img src="images/Serene.jpg" alt="cloudless industrial site" >
+                <figcaption>Image of a cloudless industrial site located in
+                    <br>
+                     East Chicago, Indiana 
+                </figcaption>
+            </figure>
+            <h1>Welcome!</h1>
+            <p> 
+                Welcome to my portfolio! I strive to be a passionate web developer dedicated to 
+                designing vivid and user friendly sites. 
+            </p>
         </main>
 
         <footer>
-            <p>Saul Enriquez, 2025 All rights reserved</p>
+            <p>Saul Enriquez, &#169 2025 All rights reserved</p>
         </footer>
 
     </div><!-- close "container" -->
@@ -68,6 +122,7 @@
         $(document).ready(function () {
 
         }); //close .ready()
+
     </script>
 
 </body>

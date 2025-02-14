@@ -2,48 +2,133 @@
 html, body {
 	margin:0px;
 	padding:0px;
-	height:100%;
+	height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 html {
-		/* Standard text-settings below */
-	font-size: 1em;
+	/* Standard text-settings below */
+	font-size: 1.125em;
     line-height: 1.4em;
 }
 
 
+/*
+colors used
+
+#Ffc93b - yellow
+#F05051 - red text background
+661b5f - purple , text outline
+White or efefef - text color
+*/
 
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-	margin: 15px;
-	
+	background-color: #Ffc93b;
 }
 header {
-    background: black;
+    color: #F05051;
+    margin-bottom: 4px;
+}
+header > nav {
+    float: none;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    font-size: medium;
+}
+#header-left {
+    padding: 20px 20px;
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 2px;
+}
+.drop-down__button {
+    color: #661bf5;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    padding: 1em;
+    font-size: medium;
+    border: none;
+    width: 100%;
+  }
+.navigation-option {
+    position: relative;
+    display: block;
+    float: none;
+    text-align: center;
+}
+.navigation-option a {
+    color: #661bf5;
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+}
+.navigation-option a:hover {
     color: white;
-    padding: 10px;
+    background-color: #661bf5;
 }
-h1 {
-    margin-top: 0px;
+  
+.drop-down__options {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    text-align: center;
+    min-width: 113px;
+    z-index: 1;
+}
+  
+.drop-down__options a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
-#container {
-	
+.drop-down__options a:hover {
+    color: #Ffc93b;
+    background-color: #F05051;
+}
+  
+  .navigation-option:hover .drop-down__options {
+    display: block;
+}
+  
+  .navigation-option:hover .drop-down__button {
+    color: white;
+    background-color: #661bf5;
 }
 
-main {
-    padding: 20px;
+
+main > p  {
+    margin: 50px 50px;
+}
+main > h1 {
+    margin-left: 50px;
+}
+footer {
+    text-align: center;
 }
 
+#figureImages {
+    margin: 0;
+}
+#figureImages > img{
+    max-width: 100%;
+    outline: 2px  #661bf5 solid;
+}
+#figureImages > figcaption {
+    margin: 5px 25px;
+    text-align: center;
 
+}
 
 
 
 
 /* Class for making YouTube/Vimeo videos responsive */
-
 figure.responsive {
     position: relative;
     padding-bottom: 56.25%;  /* 16:9 */
@@ -80,34 +165,44 @@ You can adjust the min-width numbers below, and add as many new media queries as
 ======================================== */
 
 /* Minimum width for portrait tablets and large phone screens.  */
-@media all and (min-width: 600px) {
-	
-	
-	
+@media all and (min-width: 500px) {
 	
 } /* closes 600px+ */
 
 
-
 /* Minimum width for landscape laptops. */
 @media all and (min-width: 768px) {	
-	#container {
-        border: 1px solid black;
-        width: 725;
-        margin: auto;
+	header {
+        background-color: blue;
     }
-	
+    header > nav {
+        float: right;
+    }
+    #header-left {
+        display: inline;
+        text-align: left;
+        float: left;
+        padding-right: 0;
+    }
+    .header-right {
+        padding: 50px 0 50px 0;
+        margin: 2px;
+    }
+    .navigation-option {
+        float: left;
+        text-align: center;
+    }
+    .navigation-option a {
+        display: inline-block;
+    }
+    .drop-down__options {
+        position: absolute;
+    }
 } /* closes 768px+ */
-
 
 
 /* Minimum width for larger tablets, laptops and desktops. */
 @media all and (min-width: 992px) {
-	
-	#container {
-        width: 950px;
-    }
-	
 	
 } /* closes 992px+ */
 
@@ -116,10 +211,5 @@ You can adjust the min-width numbers below, and add as many new media queries as
 /* Minimum width for larger desktops. */
 @media all and (min-width: 1200px) {
 	
-	
-	
-	
 } /* closes 1200px+ */
-
-
 
