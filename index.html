@@ -19,89 +19,129 @@
 
         <header>
 
-            
-            <div id="header-left">
-                <h1>Saul Enriquez</h1>
-                <h2>Spring 2025</h2>
-            </div>
-                
 
-            <nav class="header-right">
+            <div id="header-left">
+                <img id="logo" src="images/logo.png" alt="Logo">
+            </div>
+
+
+            <nav id="header-right">
+
                 <div class="navigation-option">
                     <a href="index.html">Home</a>
+                </div>
+
+                <div class="navigation-option">
                     <a href="bio.html">Biography</a>
                 </div>
 
                 <div class="navigation-option">
-                    <button class="drop-down__button">Assignments</button>
-                    <div class="drop-down__options">
-                        <a href="assignment/assignement1/index.html">assign 1</a>
-                        <a href="#">assign 2</a>
-                        <a href="#">assign 3</a>
-                        <a href="#">assign 4</a>
-                        <a href="#">assign 5</a>
-                        <a href="#">assign 5</a>
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Assignments</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="assignment/assignment1/index.html">assign 1</a>
+                            <a href="#">assign 2</a>
+                            <a href="assignment/assignment3/index.html">assign 3</a>
+                            <a href="#">assign 4</a>
+                            <a href="#">assign 5</a>
+                            <a href="#">assign 5</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="navigation-option">
-                    <button class="drop-down__button">Final Project</button>
-                    <div class="drop-down__options">
-                        <a href="#">Proposal</a>
-                        <a href="#">Reasearch</a>
-                        <a href="#">Exploration</a>
-                        <a href="#">Wireframe</a>
-                        <a href="#">Style Guide</a>
-                        <a href="#">Prototype</a>
-                        <a href="#">Completion</a>
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Final Project</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#">Proposal</a>
+                            <a href="#">Reasearch</a>
+                            <a href="#">Exploration</a>
+                            <a href="#">Wireframe</a>
+                            <a href="#">Style Guide</a>
+                            <a href="#">Prototype</a>
+                            <a href="#">Completion</a>
+                        </div>
                     </div>
                 </div>
-
-                <!--
-                <p><br><br><br><br><br><br></p>
-                <ul>
-                    <li><a href="index.html" class="current">Home</a></li>
-                    <li><a href="bio.html">Bio</a></li>
-                </ul>
-                <p>Assignments:</p>
-                <ul>
-                    <li><a href="assignment/assignement1/index.html">Assignment 1</a></li>
-                    <li><a href="">Assignment 3</a></li>
-                    <li><a href="">Assignment 4</a></li>
-                    <li><a href="">Assignment 5</a></li>
-                    <li><a href="">Assignment 6</a></li>
-                </ul>
-                <p>Final Project:</p>
-                <ul>
-                    <li><a href="">Proposal</a></li>
-                    <li><a href="">Research Artifacts</a></li>
-                    <li><a href="">Creative Exploration</a></li>
-                    <li><a href="">Wireframes</a></li>
-                    <li><a href="">Style Guide</a></li>
-                    <li><a href="">Hi-res Prototypes</a></li>
-                    <li><a href="">Completion</a></li>
-                </ul>
-                -->
-
             </nav>
-
         </header>
 
+
+        <hr class="rule" style="margin-right: 0;">
+
+
         <main>
-            
-            <figure id="figureImages">
-                <img src="images/Serene.jpg" alt="cloudless industrial site" >
-                <figcaption>Image of a cloudless industrial site located in
-                    <br>
-                     East Chicago, Indiana 
-                </figcaption>
-            </figure>
-            <h1>Welcome!</h1>
-            <p> 
-                Welcome to my portfolio! I strive to be a passionate web developer dedicated to 
-                designing vivid and user friendly sites. 
-            </p>
+            <section>
+
+                <figure class="section-image">
+                    <img src="images/Circle.png" alt="Blue Circle">
+                    <figcaption>
+                        The Circle of Unity
+                    </figcaption>
+                </figure>
+
+                <div class="section-text">
+                    <h1>Saul Enriquez</h1>
+                    <p>
+
+                        "Perfection is just a concept - an ideal that limits creativity.
+                        I embrace imperfection because that's where originality thrives and that's what makes it real."
+
+                    </p>
+                </div>
+
+            </section>
+            <section>
+
+                <figure class="section-image">
+                    <img src="images/Square.png" alt="Red Square">
+                    <figcaption>
+                        The Square of Stability
+                    </figcaption>
+                </figure>
+                <div class="section-text">
+                    <h1>About me</h1>
+                    <p>
+                        I'm a student and programming major at Columbia College Chicago, where I blend my passion for
+                        design with my technical skills.
+                        <br>
+                        As a programmer I'm passionate about building functional, dynamic web experiences.
+                        <br>
+                        I draw inspiration from the Bauhaus movement, I
+                        prioritize balance, precision, and structure in my work.
+
+                    </p>
+                </div>
+
+            </section>
+
+            <section>
+
+                <figure class="section-image">
+                    <img src="images/Triangle.png" alt="Yellow Square">
+                    <figcaption>
+                        The Triangle of Direction
+                    </figcaption>
+                </figure>
+
+                <div class="section-text">
+                    <h1>Statement</h1>
+                    <p>
+                        Programming is more than just code it's about creating opportunities,
+                        pushing boundaries, and making a meaningful impact.
+                        <br>
+                        I believe that technology, when harnessed with creativity, can spark innovation to simplify
+                        lives.
+                        My journey as a programmer is fueled by a constant desire to learn, evolve, and tackle
+                        challenges head-on.
+                    </p>
+                </div>
+
+            </section>
+
         </main>
+
+        <hr class="rule" style="margin-left: 0;">
 
         <footer>
             <p>Saul Enriquez, &#169 2025 All rights reserved</p>
@@ -119,10 +159,19 @@
 
     <!-- Write your jQuery code inside of the .ready() function below -->
     <script>
-        $(document).ready(function () {
+        function toggleDropdown(button) {
+            // 🔹 NEW: Selects the next dropdown-content sibling instead of using an ID
+            let dropdown = button.nextElementSibling;
+            dropdown.classList.toggle("show");
+        }
 
-        }); //close .ready()
-
+        // 🔹 UPDATED: Uses querySelectorAll to close all open dropdowns when clicking outside
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-button')) {
+                let dropdowns = document.querySelectorAll(".dropdown-content");
+                dropdowns.forEach(dropdown => dropdown.classList.remove("show"));
+            }
+        }
     </script>
 
 </body>

@@ -1,137 +1,193 @@
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
-html, body {
-	margin:0px;
-	padding:0px;
-	height: 100vh;
-    font-family: 'Courier New', Courier, monospace;
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-color: #e9e6d5;
 }
 
 html {
-	/* Standard text-settings below */
-	font-size: 1.125em;
+    /* Standard text-settings below */
+    font-size: 1.125em;
     line-height: 1.4em;
 }
 
+@font-face {
+    font-family: "JosefinSans";
+    src: url(/fonts/JosefinSans-Medium.ttf);
+}
 
 /*
-colors used
 
-#Ffc93b - yellow
-#F05051 - red text background
-661b5f - purple , text outline
-White or efefef - text color
+courier headings 
+times new roamn paragraphs
+
+
+tan E9E6D5
+yellow F1CF54
+brown pink A97C73
+dark green 575c55
+blue 6A7FDB
+pink red E83151
+
+black 
 */
 
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
-body {
-	background-color: #Ffc93b;
-}
 header {
-    color: #F05051;
-    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+
+    font-family: JosefinSans;
+    letter-spacing: 0.08em;
+    font-size: large;
+    color: black;
+    font-weight: bold;
 }
-header > nav {
-    float: none;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 2px;
-    font-size: medium;
-}
+
 #header-left {
-    padding: 20px 20px;
-    display: block;
-    position: relative;
+    margin-top: 10px;
     text-align: center;
-    margin: 2px;
 }
-.drop-down__button {
-    color: #661bf5;
-    background-color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 2px;
-    padding: 1em;
-    font-size: medium;
-    border: none;
-    width: 100%;
-  }
+
+#logo {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    background-position: center;
+}
+
 .navigation-option {
-    position: relative;
-    display: block;
-    float: none;
     text-align: center;
+    height: 2.5em;
+    margin: .5px 0;
 }
+
 .navigation-option a {
-    color: #661bf5;
-    padding: 1em;
+    width: 100%;
+    height: 100%;
     display: block;
+    align-content: center;
+    color: inherit;
     text-decoration: none;
 }
+
 .navigation-option a:hover {
-    color: white;
-    background-color: #661bf5;
+    border: dashed 1px #E83151;
+    background-color: #F1CF54;
 }
-  
-.drop-down__options {
-    display: none;
+
+.dropdown-button {
+    border: none;
+    color: inherit;
+    letter-spacing: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    background-color: inherit;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus {
+    border: dashed 1px #E83151;
+    background-color: #F1CF54;
+}
+
+.dropdown {
     position: relative;
-    background-color: #f1f1f1;
-    text-align: center;
-    min-width: 113px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.dropdown a:hover {
+    border: dashed 2px #575c55;
+    background-color: #E83151;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: black solid 1px;
+    width: 100%;
+    overflow: auto;
     z-index: 1;
 }
-  
-.drop-down__options a {
-    padding: 12px 16px;
+
+.dropdown-content a {
+    background-color: #6A7FDB;
+    height: 2.5em;
     text-decoration: none;
     display: block;
 }
 
-.drop-down__options a:hover {
-    color: #Ffc93b;
-    background-color: #F05051;
-}
-  
-  .navigation-option:hover .drop-down__options {
+.dropdown-content.show {
     display: block;
 }
-  
-  .navigation-option:hover .drop-down__button {
-    color: white;
-    background-color: #661bf5;
+
+
+.rule {
+  border: none;
+  height: 8px;
+  width: 90%;
+  background-color: #575c55; 
+}
+
+main {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #E9E6D5;
+
+    display: flex;
+    flex-direction: column ;
+}
+section {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+figure.section-image {
+    margin: auto;
+    width: 70%;
+    padding: 10% 0;
+    text-align: center;
+}
+.section-image > img {
+    width: 100%;
+}
+h1 {
+    font-family: JosefinSans;
+    font-size: larger;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+p {
+    font-size: medium;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 
-main > p  {
-    margin: 50px 50px;
-}
-main > h1 {
-    margin-left: 50px;
-}
 footer {
+    margin-top: 5%;
     text-align: center;
 }
-
-#figureImages {
-    margin: 0;
-}
-#figureImages > img{
-    max-width: 100%;
-    outline: 2px  #661bf5 solid;
-}
-#figureImages > figcaption {
-    margin: 5px 25px;
-    text-align: center;
-
-}
-
 
 
 
 /* Class for making YouTube/Vimeo videos responsive */
 figure.responsive {
     position: relative;
-    padding-bottom: 56.25%;  /* 16:9 */
+    padding-bottom: 56.25%;
+    /* 16:9 */
     height: 0px;
     overflow: hidden;
     max-width: 100%;
@@ -148,14 +204,6 @@ figure.responsive iframe {
 
 
 /* A better looking default horizontal rule */
-hr {
-    display: block;
-    height: 1px;
-    border: 0px;
-    border-top: 1px solid #ccc;
-    margin: 1em 0px;
-    padding: 0px;
-}
 
 
 
@@ -165,51 +213,110 @@ You can adjust the min-width numbers below, and add as many new media queries as
 ======================================== */
 
 /* Minimum width for portrait tablets and large phone screens.  */
-@media all and (min-width: 500px) {
-	
-} /* closes 600px+ */
+@media all and (min-width: 500px) 
+{
+
+}
+
+/* closes 600px+ */
 
 
 /* Minimum width for landscape laptops. */
-@media all and (min-width: 768px) {	
-	header {
-        background-color: blue;
+@media all and (min-width: 768px) {
+    #header-right {
+        display: flex;
+        justify-content: space-evenly;
     }
-    header > nav {
-        float: right;
-    }
-    #header-left {
-        display: inline;
-        text-align: left;
-        float: left;
-        padding-right: 0;
-    }
-    .header-right {
-        padding: 50px 0 50px 0;
-        margin: 2px;
-    }
+
     .navigation-option {
-        float: left;
         text-align: center;
     }
+
     .navigation-option a {
-        display: inline-block;
+        display: block;
     }
-    .drop-down__options {
+
+    .drop-down {
         position: absolute;
     }
-} /* closes 768px+ */
+
+    section {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 80%;
+        padding-bottom: 0;
+    }
+    figure.section-image {
+        width: 30%;
+        margin: 0 10% 0 0;
+    }
+    .section-image > img {
+        max-width: 200px;
+    }
+    .section-text {
+        width: 60%;
+            padding: 10% 0;
+        
+    }
+
+}
+
+/* closes 768px+ */
 
 
 /* Minimum width for larger tablets, laptops and desktops. */
 @media all and (min-width: 992px) {
-	
-} /* closes 992px+ */
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10%;
+        width: 80%;
+    }
+    header {
+        margin-top: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: large;
+    }
+    #header-left {
+        margin-left: 10%;
+    }
+    #header-right {
+        width: 50%;
+        align-items: center;
+    }
+    section {
+        width: 30%;
+        margin: 0;
+        flex-direction: column;
+    }
+    figure.section-image {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .section-image > img {
+        object-fit: contain;
+        max-width: 250px;
+    }
+    .section-text {
+        width: 100%;
+    }
+    p {
+        padding-top: 0;
+    }
+}
+
+/* closes 992px+ */
+
+
 
 
 
 /* Minimum width for larger desktops. */
-@media all and (min-width: 1200px) {
-	
-} /* closes 1200px+ */
+@media all and (min-width: 1200px) {}
 
+/* closes 1200px+ */

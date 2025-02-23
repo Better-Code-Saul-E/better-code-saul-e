@@ -11,6 +11,23 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+@media all and (min-width: 992px) {
+    main {
+        justify-content: center;
+    }
+    section {
+        width: 80%;
+    }
+    figure.section-image {
+        padding: 10% 0 8% 0;
+    }
+    .section-text  {
+        padding-top: 0%;
+    }
+}
+
+    </style>
 </head>
 
 <body>
@@ -19,85 +36,83 @@
 
         <header>
 
-            
-            <div id="header-left">
-                <h1>Saul Enriquez</h1>
-                <h2>Spring 2025</h2>
-            </div>
-                
 
-            <nav class="header-right">
+            <div id="header-left">
+                <img id="logo" src="images/logo.png" alt="Logo">
+            </div>
+
+
+            <nav id="header-right">
+
                 <div class="navigation-option">
                     <a href="index.html">Home</a>
-                    <a href="#">Biography</a>
                 </div>
 
                 <div class="navigation-option">
-                    <button class="drop-down__button">Assignments</button>
-                    <div class="drop-down__options">
-                        <a href="assignment/assignement1/index.html">assign 1</a>
-                        <a href="#">assign 2</a>
-                        <a href="#">assign 3</a>
-                        <a href="#">assign 4</a>
-                        <a href="#">assign 5</a>
-                        <a href="#">assign 5</a>
+                    <a href="bio.html">Biography</a>
+                </div>
+
+                <div class="navigation-option">
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Assignments</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="assignment/assignment1/index.html">assign 1</a>
+                            <a href="#">assign 2</a>
+                            <a href="assignment/assignment3/index.html">assign 3</a>
+                            <a href="#">assign 4</a>
+                            <a href="#">assign 5</a>
+                            <a href="#">assign 5</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="navigation-option">
-                    <button class="drop-down__button">Final Project</button>
-                    <div class="drop-down__options">
-                        <a href="#">Proposal</a>
-                        <a href="#">Reasearch</a>
-                        <a href="#">Exploration</a>
-                        <a href="#">Wireframe</a>
-                        <a href="#">Style Guide</a>
-                        <a href="#">Prototype</a>
-                        <a href="#">Completion</a>
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Final Project</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#">Proposal</a>
+                            <a href="#">Reasearch</a>
+                            <a href="#">Exploration</a>
+                            <a href="#">Wireframe</a>
+                            <a href="#">Style Guide</a>
+                            <a href="#">Prototype</a>
+                            <a href="#">Completion</a>
+                        </div>
                     </div>
                 </div>
-
-                <!--
-                <p><br><br><br><br><br><br></p>
-                <ul>
-                    <li><a href="index.html" class="current">Home</a></li>
-                    <li><a href="bio.html">Bio</a></li>
-                </ul>
-                <p>Assignments:</p>
-                <ul>
-                    <li><a href="assignment/assignement1/index.html">Assignment 1</a></li>
-                    <li><a href="">Assignment 3</a></li>
-                    <li><a href="">Assignment 4</a></li>
-                    <li><a href="">Assignment 5</a></li>
-                    <li><a href="">Assignment 6</a></li>
-                </ul>
-                <p>Final Project:</p>
-                <ul>
-                    <li><a href="">Proposal</a></li>
-                    <li><a href="">Research Artifacts</a></li>
-                    <li><a href="">Creative Exploration</a></li>
-                    <li><a href="">Wireframes</a></li>
-                    <li><a href="">Style Guide</a></li>
-                    <li><a href="">Hi-res Prototypes</a></li>
-                    <li><a href="">Completion</a></li>
-                </ul>
-                -->
-
             </nav>
-
         </header>
 
+
+        <hr class="rule" style="margin-right: 0;">
+
         <main>
-            
-            <figure id="figureImages">
-                <img src="images/Nature.jpg" alt="gloomy day" style="max-height: 1000px; width: 100%; object-fit: cover;" >
-                <figcaption>Image of a hill without sun</figcaption>
-            </figure>
-            <h1>Imperfect Pixels</h1>
-            <p> 
-                Perfection is just a concept. I choose to embrace imperfection, knowing that creativity is flawless. I design unique experiences that feel real
-            </p>
+            <section>
+
+                <figure class="section-image" >
+                    <img src="images/bauhaus.png" alt="Bauhaus" style="max-width: 400px ;">
+                    <figcaption>
+                        Bauhaus design
+                    </figcaption>
+                </figure>
+
+                <div class="section-text" >
+                    <h1>Who am i Really?</h1>
+                    <p>
+                        I'm Saul, a programmer based in Illinois. 
+                        Born in Chicago, my journey into the world of programming began 
+                        with a fascination for solving problems and building things from scratch LITERALLY. 
+                        I approach every project with curiosity and a determination to learn. 
+                        Whether it's coding, exploring new technologies, or tackling new challenges, 
+                        I'm always striving to grow. I see programming as more than just a profession—it's a way to create, 
+                        innovate, and push boundaries. 
+                    </p>
+                </div>
+
+            </section>
         </main>
+
+        <hr class="rule" style="margin-left: 0;">
 
         <footer>
             <p>Saul Enriquez, &#169 2025 All rights reserved</p>
