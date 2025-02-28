@@ -128,10 +128,19 @@
 
     <!-- Write your jQuery code inside of the .ready() function below -->
     <script>
-        $(document).ready(function () {
+        function toggleDropdown(button) {
+            // 🔹 NEW: Selects the next dropdown-content sibling instead of using an ID
+            let dropdown = button.nextElementSibling;
+            dropdown.classList.toggle("show");
+        }
 
-        }); //close .ready()
-
+        // 🔹 UPDATED: Uses querySelectorAll to close all open dropdowns when clicking outside
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-button')) {
+                let dropdowns = document.querySelectorAll(".dropdown-content");
+                dropdowns.forEach(dropdown => dropdown.classList.remove("show"));
+            }
+        }
     </script>
 
 </body>
