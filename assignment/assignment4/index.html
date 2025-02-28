@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Carmine & Weston LLC</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+
+            <div id="contactInfo">
+                <i class="material-icons" style="font-size: medium;">call</i>&nbsp;<p>(800)244-6227</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="material-icons" style="font-size: medium;">email</i>&nbsp;<p>info@carminellc.com</p>
+
+            </div>
+            <div id="header-left">
+                <img id="logo" src="images/Logo.png" alt="Logo">
+            </div>
+
+            <nav id="header-right">
+
+
+                <div class="navigation-option">
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Professionals</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <hr class="divider">
+                            <a href="#">Sterling</a>
+                            <a href="#">Adler</a>
+                            <a href="#">Lennox</a>
+                            <a href="#">Sinclair</a>
+                            <a href="#">Bellamy</a>
+                            <a href="#">Mercer</a>
+                            <a href="#">Rowe</a>
+                            <a href="#">Ashford</a>
+                            <a href="#">Blackwell</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation-option">
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Services</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <hr class="divider">
+                            <a href="#">Mergers & Acquisitions</a>
+                            <a href="#">Corporate Governance & Compliance</a>
+                            <a href="#">Business Structuring & Entity Formation</a>
+                            <a href="#">Contract Drafting & Negotiation</a>
+                            <a href="#">Shareholder & Partnership Agreements</a>
+                            <a href="#">Trademark & Copyright Protection</a>
+                            <a href="#">Licensing & Brand Management</a>
+                            <a href="#">Trade Secrets & Confidentiality Agreements</a>
+                            <a href="#">Entertainment & Publishing Law</a>
+                            <a href="#">Patent Prosecution & Defense</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="navigation-option">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="navigation-option">
+                    <a href="bio.html">Biography</a>
+                </div>
+
+                <div class="navigation-option">
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Assignments</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="assignment/assignment1/index.html">Assignment 1</a>
+                            <a href="assignment/assignment3/index.html">Assignment 3</a>
+                            <a href="assignment/assignment4/index.html">Assignment 4</a>
+                            <a href="#">Assignment 5</a>
+                            <a href="#">Assignment 5</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </nav>
+        </header>
+
+        <main>
+            <div id="cover"> 
+                <img id="cover-img" src="images/ChicagoSkyline.jpg">
+            </div>
+        </main>
+
+        <footer>
+            <p>Saul Enriquez, &#169 2025 All rights reserved</p>
+        </footer>
+
+    </div><!-- close "container" -->
+
+
+
+
+
+    <!-- Link to jQuery on Google Hosted Libraries-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <!-- Write your jQuery code inside of the .ready() function below -->
+    <script>
+        function toggleDropdown(button) {
+            // 🔹 NEW: Selects the next dropdown-content sibling instead of using an ID
+            let dropdown = button.nextElementSibling;
+            dropdown.classList.toggle("show");
+        }
+
+        // 🔹 UPDATED: Uses querySelectorAll to close all open dropdowns when clicking outside
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-button')) {
+                let dropdowns = document.querySelectorAll(".dropdown-content");
+                dropdowns.forEach(dropdown => dropdown.classList.remove("show"));
+            }
+        }
+    </script>
+
+</body>
+
+</html>

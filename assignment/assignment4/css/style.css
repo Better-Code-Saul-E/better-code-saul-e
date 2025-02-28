@@ -1,0 +1,156 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-color: #e9e6d5;
+}
+
+html {
+    /* Standard text-settings below */
+    font-size: 1.125em;
+    line-height: 1.4em;
+}
+
+
+/*
+#C5B357 dark yellow
+*/
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.08em;
+    font-size: large;
+    background-color: #202020;
+    color: white;
+    font-weight: bold;
+}
+#contactInfo
+{
+    width: 100%;
+    height: 30px;
+    font-size: small;
+    padding-left: 15%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+#contactInfo p
+{
+    margin:  0;
+    word-spacing: 10px;
+}
+#header-left {
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 5%;
+}
+#logo {
+    width: 150px;
+    height: 75px;
+    object-fit: cover;
+    background-position: center;
+}
+#header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin-right: 5%;
+}
+.navigation-option {
+    text-align: center;
+    height: 2.5em;
+    margin: .5px 0;
+}
+.divider {
+  border: none;
+  padding: 2.5px 0;
+  margin: 0;
+  background-color: #C5B357; 
+}
+.navigation-option a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-content: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.dropdown-button {
+    border: none;
+    color: inherit;
+    letter-spacing: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    background-color: inherit;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus {
+    border: dashed 1px #E83151;
+    background-color: #F1CF54;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.dropdown a:hover {
+    border-bottom: solid 2px #C5B357;
+    border-top: solid 2px #C5B357;
+}
+
+.dropdown-content {
+    display: none;
+    font-size: medium ;
+    position: absolute;
+    width: 300%;
+    padding: 0 5px;
+    overflow: auto;
+    z-index: 1;
+}
+.dropdown-content a, h2 {
+    padding: 5px 0;
+    margin: 0;
+    text-align: center;
+    background-color: black;
+    height: 3em;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content.show {
+    display: block;
+}
+#cover
+{
+    height: 15%;
+    width: 100%;
+    overflow: none;
+}
+#cover-img
+{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+    background-position: center;
+}

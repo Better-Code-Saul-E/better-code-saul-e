@@ -1,44 +1,75 @@
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
-html, body {
-	margin:0px;
-	padding:0px;
-	height:100%;
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
 }
 
 html {
-		/* Standard text-settings below */
-	font-size: 1em;
+    /* Standard text-settings below */
+    font-size: 1em;
     line-height: 1.4em;
 }
 
+/*
+E9E6D5 - beige
+09090B - hr
+6A7FDB blue
+575C55 green 
 
+A9A79A olive gray
+*/
 
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 
 body {
-	
-	
+    background-color: #E9E6D5;
+    color: #F264F8;
+
+}
+
+h1 {
+    text-shadow:
+        0 0 5px #A4F2EF,
+        /* Pink glow */
+        0 0 10px #A4F2EF,
+        /* Pink glow */
+        0 0 15px #A4F2EF,
+        0 0 15px #A4F2EF,
+        0 0 20px #A4F2EF,
+        0 0 25px #A4F2EF,
+        0 0 30px #A4F2EF;
 }
 
 
 #container {
-	width:90%;
-	margin:auto;
+    width: 90%;
+    margin: auto;
 }
 
 
 
 figure {
-	margin:0px;
+    margin: 0px;
 }
 
 figure img {
-	width:100%;
+    width: 100%;
+}
+
+.mobile {
+    background-color: yellow;
+    opacity: 1;
+}
+
+.desktop {
+    display: none;
 }
 
 nav section {
-	border:1px solid black;
+    border: 1px solid black;
 }
 
 
@@ -46,7 +77,8 @@ nav section {
 
 figure.responsive {
     position: relative;
-    padding-bottom: 56.25%;  /* 16:9 */
+    padding-bottom: 56.25%;
+    /* 16:9 */
     height: 0px;
     overflow: hidden;
     max-width: 100%;
@@ -80,36 +112,51 @@ You can adjust the min-width numbers below, and add as many new media queries as
 ======================================== */
 
 /* Minimum width for iPads and tablets.  */
-@media all and (min-width: 481px) {
-	
-	
-	
-	
-} /* closes 481px+ */
+@media all and (min-width: 481px) {}
+
+/* closes 481px+ */
 
 
 
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
-	
-	#container {
-		width:80%;
-	}
-		
-	
-} /* closes 769px+ */
+
+    #container {
+        width: 80%;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        background-color: yellow;
+        opacity: 1;
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    nav section {
+        flex: 0 1 48%;
+    }
+}
+
+/* closes 769px+ */
 
 
 
 /* Minimum width for desktop screens. */
 @media all and (min-width: 1024px) {
-	
-	
-	
-	
-} /* closes 1024px+ */
+    nav section {
+        flex: 0 1 32%;
+    }
 
 
+}
 
-
-
+/* closes 1024px+ */
