@@ -3,7 +3,7 @@ body {
     margin: 0px;
     padding: 0px;
     height: 100vh;
-    background-color: #e9e6d5;
+    background-color: white;
 }
 
 html {
@@ -98,12 +98,8 @@ header {
     height: 100%;
     width: 100%;
     cursor: pointer;
-}
-
-.dropdown-button:hover,
-.dropdown-button:focus {
-    border: dashed 1px #E83151;
-    background-color: #F1CF54;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown {
@@ -122,7 +118,7 @@ header {
     display: none;
     font-size: medium ;
     position: absolute;
-    width: 300%;
+    width: 300px;
     padding: 0 5px;
     overflow: auto;
     z-index: 1;
@@ -139,11 +135,15 @@ header {
 .dropdown-content.show {
     display: block;
 }
+
+
+main{
+    font-family: 'Times New Roman', Times, serif;
+}
 #cover
 {
     height: 15%;
     width: 100%;
-    overflow: none;
 }
 #cover-img
 {
@@ -154,3 +154,107 @@ header {
     object-fit: cover;
     background-position: center;
 }
+section{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+    background-color: #3A3938;
+    filter: grayscale(100%);
+
+} 
+.section-image, .section-text{
+    width: 40%;
+    align-content: center;
+}
+.image {
+    object-fit: contain;
+    margin: 20px;
+    width: 100%;
+}
+
+footer{
+    color: white;
+    padding: 1% 10%;
+    height: 20%;
+    background-color: #444444;
+}
+
+
+
+
+/* Animations activated after 10 seconds*/
+#logo, .navigation-option a, .dropdown-button, .section-text h1, #contactInfo, .section-image img {
+    animation: none;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.bounce-animation #logo {
+    animation: bounce 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-20px) rotate(-2deg); }
+    50% { transform: translateX(20px) rotate(2deg); }
+    75% { transform: translateX(-20px) rotate(-2deg); }
+    100% { transform: translateX(0); }
+}
+.shake-animation .navigation-option a:hover {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+}
+.wiggle-animation .dropdown-button:hover {
+    animation: wiggle 0.4s ease-in-out;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); opacity: 1; }
+    20% { transform: translate(-2px, 2px); opacity: 0.9; }
+    40% { transform: translate(2px, -2px); opacity: 1; }
+    60% { transform: translate(-2px, 2px); opacity: 0.9; }
+    80% { transform: translate(2px, -2px); opacity: 1; }
+    100% { transform: translate(0); opacity: 1; }
+}
+.glitch-animation .section-text h1 {
+    display: inline-block;
+    animation: glitch 0.5s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { background-color: black; color: white; }
+    50% { background-color: white; color: black; }
+}
+.flicker-animation #contactInfo {
+    animation: flicker 1.5s infinite alternate;
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20%); }
+    100% { transform: translateY(0); }
+}
+.float-animation .section-image img {
+    animation: float 2s ease-in-out infinite;
+}
+@keyframes strobeLights {
+    0%, 100% { background-color: red; } 
+    25% { background-color: yellow; } 
+    50% { background-color: green; } 
+    75% { background-color: blue; } 
+}
+
+header.strobe-effect, footer.strobe-effect {
+    animation: strobeLights 5s infinite ease-in-out;
+}
+

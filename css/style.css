@@ -131,15 +131,6 @@ header {
 .dropdown-content.show {
     display: block;
 }
-
-
-.rule {
-  border: none;
-  height: 8px;
-  width: 90%;
-  background-color: #575c55; 
-}
-
 main {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #E9E6D5;
@@ -149,7 +140,7 @@ main {
 }
 section {
     width: 70%;
-    margin: auto;
+    margin-top: 8px;
     padding-bottom: 15%;
     display: flex;
     flex-direction: column;

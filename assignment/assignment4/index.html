@@ -35,7 +35,8 @@
 
                 <div class="navigation-option">
                     <div class="dropdown">
-                        <button onclick="toggleDropdown(this)" class="dropdown-button">Professionals</button>
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Professionals<i
+                                class="material-icons" style="margin-top: 5px;">expand_more</i></button>
                         <div id="myDropdown" class="dropdown-content">
                             <hr class="divider">
                             <a href="#">Sterling</a>
@@ -53,7 +54,8 @@
 
                 <div class="navigation-option">
                     <div class="dropdown">
-                        <button onclick="toggleDropdown(this)" class="dropdown-button">Services</button>
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Services<i
+                                class="material-icons">expand_more</i></button>
                         <div id="myDropdown" class="dropdown-content">
                             <hr class="divider">
                             <a href="#">Mergers & Acquisitions</a>
@@ -70,26 +72,32 @@
                     </div>
                 </div>
 
-
                 <div class="navigation-option">
-                    <a href="index.html">Home</a>
+                    <a href="index.html">Publications</a>
                 </div>
 
                 <div class="navigation-option">
-                    <a href="bio.html">Biography</a>
+                    <a href="bio.html">News</a>
                 </div>
 
                 <div class="navigation-option">
                     <div class="dropdown">
-                        <button onclick="toggleDropdown(this)" class="dropdown-button">Assignments</button>
+                        <button onclick="toggleDropdown(this)" class="dropdown-button">Our Firm<i
+                                class="material-icons">expand_more</i></button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="assignment/assignment1/index.html">Assignment 1</a>
-                            <a href="assignment/assignment3/index.html">Assignment 3</a>
-                            <a href="assignment/assignment4/index.html">Assignment 4</a>
-                            <a href="#">Assignment 5</a>
-                            <a href="#">Assignment 5</a>
+                            <hr class="divider">
+                            <a href="#">Principles</a>
+                            <a href="#">Legacy</a>
+                            <a href="#">Partners</a>
+                            <a href="#">Testimonials</a>
+                            <a href="#">Cases</a>
+                            <a href="#">Careers & Internships</a>
                         </div>
                     </div>
+                </div>
+
+                <div class="navigation-option">
+                    <a href="#">Contact</a>
                 </div>
 
 
@@ -97,13 +105,45 @@
         </header>
 
         <main>
-            <div id="cover"> 
+            <div id="cover">
                 <img id="cover-img" src="images/ChicagoSkyline.jpg">
             </div>
+
+            <section
+                style="background: url('images/IndustrialSite.jpg') no-repeat center bottom; background-size: cover; ">
+                <div class="section-text">
+                    <h1>About us</h1>
+                    <p>For over a century, Carmine, Sterling & Weston LLP has been at the forefront of justice,
+                        offering unwavering legal representation to those who demand nothing less than excellence.
+                        Founded on the principles of integrity, discretion, and fierce advocacy, our firm has built a
+                        legacy of trust, serving high-profile individuals, corporations, and institutions with the
+                        utmost professionalism.</p>
+                </div>
+                <div class="section-image">
+                    <img class="image" src="images/USAMap.png">
+                </div>
+
+            </section>
+            <section style="background-color: transparent; color: black;">
+                <div class="section-text">
+                    <h1>Giving back</h1>
+                </div>
+                <div class="section-text">
+                    <p>We are committed to giving back to our community. Whether it's
+                        volunteering our time and talents or providing financial support,
+                        we believe in good corporate citizenship.</p>
+                </div>
+
+            </section>
+
         </main>
 
         <footer>
-            <p>Saul Enriquez, &#169 2025 All rights reserved</p>
+            <p>Carmine, Sterling & Weston LLP
+                315 Lexington Avenue, Suite 1200
+                New York, NY 10016
+                Phone: (212) 555-8972
+                Email: contact@cswlaw.com</p>
         </footer>
 
     </div><!-- close "container" -->
@@ -131,6 +171,12 @@
                 dropdowns.forEach(dropdown => dropdown.classList.remove("show"));
             }
         }
+        setTimeout(() => {
+            document.body.classList.add("bounce-animation", "shake-animation", "wiggle-animation", "glitch-animation", "flicker-animation", "float-animation");
+            document.querySelector("header").classList.add("strobe-effect");
+            document.querySelector("footer").classList.add("strobe-effect");
+
+        }, 10000); 
     </script>
 
 </body>
