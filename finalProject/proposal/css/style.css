@@ -1,0 +1,332 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-color: #e9e6d5;
+}
+
+html {
+    /* Standard text-settings below */
+    font-size: 1.125em;
+    line-height: 1.4em;
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url(/fonts/JosefinSans-Medium.ttf);
+}
+
+/*
+
+courier headings 
+times new roamn paragraphs
+
+
+tan E9E6D5
+yellow F1CF54
+brown pink A97C73
+dark green 575c55
+blue 6A7FDB
+pink red E83151
+
+black 
+*/
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+header {
+    display: flex;
+    flex-direction: column;
+
+    font-family: JosefinSans;
+    letter-spacing: 0.08em;
+    font-size: large;
+    color: black;
+    font-weight: bold;
+}
+
+#header-left {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#logo {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    background-position: center;
+}
+
+.navigation-option {
+    text-align: center;
+    height: 2.5em;
+    margin: .5px 0;
+}
+
+.navigation-option a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-content: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+.navigation-option a:hover {
+    border: dashed 1px #E83151;
+    background-color: #F1CF54;
+}
+
+.dropdown-button {
+    border: none;
+    color: inherit;
+    letter-spacing: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    background-color: inherit;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus {
+    border: dashed 1px #E83151;
+    background-color: #F1CF54;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.dropdown a:hover {
+    border: dashed 2px #575c55;
+    background-color: #E83151;
+}
+
+.dropdown-content {
+    display: none;
+    font-size: medium;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    background-color: #6A7FDB;
+    border: #575c55 solid 1px;
+    height: 2.5em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.rule {
+    border: none;
+    height: 8px;
+    width: 90%;
+    background-color: #575c55;
+}
+
+main {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #E9E6D5;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 70%;
+    margin-top: 8px;
+    padding-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+figure.section-image {
+    margin: auto;
+    width: 70%;
+    padding: 10% 0;
+    text-align: center;
+}
+
+.section-image>img {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: JosefinSans;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+p {
+    font-size: medium;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+footer {
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+
+/* Class for making YouTube/Vimeo videos responsive */
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* A better looking default horizontal rule */
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for portrait tablets and large phone screens.  */
+@media all and (min-width: 500px) {}
+
+/* closes 600px+ */
+
+
+/* Minimum width for landscape laptops. */
+@media all and (min-width: 768px) {
+    #header-right {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .navigation-option {
+        text-align: center;
+    }
+
+    .navigation-option a {
+        display: block;
+    }
+
+    .drop-down {
+        position: absolute;
+    }
+
+    section {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 80%;
+        padding-bottom: 0;
+    }
+
+    figure.section-image {
+        width: 30%;
+        margin: 0 10% 0 0;
+    }
+
+    .section-image>img {
+        max-width: 200px;
+    }
+
+    .section-text {
+        width: 60%;
+        padding: 2% 0;
+
+    }
+
+}
+
+/* closes 768px+ */
+
+
+/* Minimum width for larger tablets, laptops and desktops. */
+@media all and (min-width: 992px) {
+    main {
+        justify-content: space-between;
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    header {
+        margin-top: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: large;
+    }
+
+    #header-left {
+        margin-left: 10%;
+    }
+
+    #header-right {
+        width: 50%;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    figure.section-image {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .section-image>img {
+        object-fit: contain;
+        max-width: 250px;
+    }
+
+    .section-text {
+        width: 100%;
+    }
+
+    p {
+        padding-top: 0;
+    }
+}
+
+/* closes 992px+ */
+
+
+
+
+
+/* Minimum width for larger desktops. */
+@media all and (min-width: 1200px) {}
+
+/* closes 1200px+ */
