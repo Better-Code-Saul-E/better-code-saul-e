@@ -113,7 +113,7 @@ header {
 
 .dropdown-content {
     display: none;
-    font-size: medium ;
+    font-size: medium;
     position: absolute;
     width: 100%;
     overflow: auto;
@@ -131,21 +131,25 @@ header {
 .dropdown-content.show {
     display: block;
 }
+
 .rule {
     border: none;
     height: 8px;
     width: 90%;
-    background-color: #575c55; 
-  }
+    background-color: #575c55;
+}
+
 main {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #E9E6D5;
 
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
 }
+
 section {
     width: 70%;
+    margin-left: 10%;
     margin-top: 8px;
     padding-bottom: 15%;
     display: flex;
@@ -159,15 +163,18 @@ figure.section-image {
     padding: 10% 0;
     text-align: center;
 }
-.section-image > img {
+
+.section-image>img {
     width: 100%;
 }
+
 h1 {
     font-family: JosefinSans;
     font-size: larger;
     margin-top: 0;
     margin-bottom: 0;
 }
+
 p {
     font-size: medium;
     font-family: Helvetica, Arial, sans-serif;
@@ -211,10 +218,7 @@ You can adjust the min-width numbers below, and add as many new media queries as
 ======================================== */
 
 /* Minimum width for portrait tablets and large phone screens.  */
-@media all and (min-width: 500px) 
-{
-
-}
+@media all and (min-width: 500px) {}
 
 /* closes 600px+ */
 
@@ -239,22 +243,26 @@ You can adjust the min-width numbers below, and add as many new media queries as
     }
 
     section {
+        margin-left: 10%;
         flex-direction: row;
         justify-content: flex-start;
         width: 80%;
         padding-bottom: 0;
     }
+
     figure.section-image {
         width: 30%;
         margin: 0 10% 0 0;
     }
-    .section-image > img {
+
+    .section-image>img {
         max-width: 200px;
     }
+
     .section-text {
         width: 60%;
-            padding: 10% 0;
-        
+        padding: 10% 0;
+
     }
 
 }
@@ -270,24 +278,29 @@ You can adjust the min-width numbers below, and add as many new media queries as
         margin-left: 10%;
         width: 80%;
     }
+
     header {
         margin-top: 10px;
         flex-direction: row;
         justify-content: space-between;
         font-size: large;
     }
+
     #header-left {
         margin-left: 10%;
     }
+
     #header-right {
         width: 50%;
         align-items: center;
     }
+
     section {
         width: 30%;
         margin: 0;
         flex-direction: column;
     }
+
     figure.section-image {
         width: 100%;
         margin: 0;
@@ -296,13 +309,16 @@ You can adjust the min-width numbers below, and add as many new media queries as
         align-items: center;
 
     }
-    .section-image > img {
+
+    .section-image>img {
         object-fit: contain;
         max-width: 250px;
     }
+
     .section-text {
         width: 100%;
     }
+
     p {
         padding-top: 0;
     }
