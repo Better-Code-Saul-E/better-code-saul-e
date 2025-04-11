@@ -1,0 +1,59 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-color: #e9e6d5;
+}
+
+html {
+    /* Standard text-settings below */
+    font-size: 1.125em;
+    line-height: 1.8em;
+}
+
+body {
+    width: 90%;
+    margin: auto;
+}
+
+.img1 {
+    background-image: url(../images/piper1.jpeg);
+    min-height: 200px;
+}
+
+.img2 {
+    background-image: url(../images/piper2.png);
+    min-height: 400px;
+}
+
+.img3 {
+    background-image: url(../images/piper3.png);
+    min-height: 400px;
+}
+
+.img4 {
+    background-image: url(../images/piper4.png);
+    min-height: 400px;
+}
+
+.parallax {
+    position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+@media all and (min-width: 992px) {
+    body {
+        width: 50%;
+    }
+}
+section p {
+    transition: all 0.3s ease;
+}
+
+.img4 {
+    transition: transform 0.5s ease-in-out;
+}

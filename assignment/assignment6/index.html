@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Assignment 6</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let section1 = document.querySelector(".img1");
+            let section2 = document.querySelector(".img2");
+            let section3 = document.querySelector(".img4");
+
+            let sectionsP = document.querySelectorAll("section p");
+
+            window.addEventListener("scroll", () => {
+                let scrollY = window.scrollY + window.innerHeight;
+
+                // highlighting the text
+                if (scrollY > section2.offsetTop + 200) {
+                    for (let i = 0; i < sectionsP.length; i++) {
+                        sectionsP[i].style.backgroundColor = "#333";
+                        sectionsP[i].style.color = "#fff";
+                    }
+                }
+
+                // changing the font 
+                if (scrollY > section1.offsetTop + 800) {
+                    document.body.style.fontFamily = "monospace";
+                }
+
+            });
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>The Pied Piper of Hamelin</h1>
+    </header>
+    <main>
+        <article>
+            <section>
+                <p>
+                    The remixed nursery rhyme I've chosen to analyze is the Pied Piper of Hamelin. Originally It was a
+                    famous German folktale that tells the story of a town plagued by rats. In desperation, the
+                    townspeople hire a mysterious piper who promises to rid them of the rats with his magical pipe
+                    music. The piper stays true to his word and lures the rats away with his enchanting tunes, but when
+                    the townspeople refuse to pay him as promised, he takes revenge by using his music to lead away all
+                    the town's children. The tale serves as a cautionary lesson about the consequences of not honoring
+                    promises and contracts.
+                </p>
+            </section>
+            <div class="img1 parallax"></div>
+            <section>
+                <p>
+                    In one remix, the Pied Piper becomes the source of chaos, infesting towns with rats and rescuing
+                    them. This reversal challenges the audience to reconsider their perceptions of heroism and villainy.
+                    This reinterpretation makes the reader question human nature. </p>
+            </section>
+            <div class="img2 parallax"></div>
+            <section>
+                <p>
+                    The Disney film remix introduces some fantasy elements, transforming the Pied Piper into a mystical
+                    figure who leads children into another realm through a portal. This portrayal gives you a sense of
+                    wonder and mystery, which can encourage viewers to consider existential themes such as the
+                    afterlife. Disney's remix is more like an allusion to the audience because many believe in the
+                    afterlife. I believe Disney seized the opportunity to create an adaptation to increase their
+                    popularity.
+                </p>
+            </section>
+            <div class="img3 parallax"></div>
+            <section>
+                <p>
+                    Other remixes dive into darker and more disturbing themes, such as child homicide and rape. While
+                    these interpretations provoke discomfort, they serve as reminders of the story's role in confronting
+                    difficult truths. Overall, the many remixes of "The Pied Piper of Hamelin" navigate a complex
+                    ethical dilemma.
+                </p>
+            </section>
+            <div class="img4 parallax"></div>
+            <section>
+                <p> Back in the early 16th century, there weren't any copyright laws, so people could freely retell and
+                    remix the story of "The Pied Piper of Hamelin" however they wanted. This led to an abundant amount
+                    of variations over time. Despite the many reinterpretations, the message of the tale stays the same,
+                    which is the importance of honoring promises and contracts. Whether the Pied Piper rescues the town
+                    from rats or leads its children away in vengeance, the result of betrayal echoes through each
+                    sentence, serving as a cautionary tale for everyone.
+
+                    While brainstorming for my remix of the Pied Piper, I aimed to dive into themes of righteousness,
+                    consequences, and the supernatural. I also mixed the elements of mystery and worry to leave the
+                    conclusion lingering in the reader's mind. By exaggerating the darkness of the original tale, I
+                    wanted to challenge readers to confront the difficult truths, like other remixes had. </p>
+            </section>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
