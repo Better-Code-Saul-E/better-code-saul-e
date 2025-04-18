@@ -123,6 +123,7 @@ header {
 .dropdown-content a {
     background-color: #6A7FDB;
     border: #575c55 solid 1px;
+    line-height: 1.2;
     height: 2.5em;
     text-decoration: none;
     display: block;
